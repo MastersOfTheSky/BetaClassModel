@@ -1,0 +1,2 @@
+# BetaClassModel
+class ideas
