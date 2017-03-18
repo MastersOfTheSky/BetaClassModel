@@ -5,8 +5,9 @@ class Flight
 {
 public:
     Flight();
-    Flight(char*, int, int, int, int, int, int, double);
+    Flight(char*, char*, int, int, int, int, int, int, double);
 
+    char* Get_company_name();
     char* Get_destination();
     int Get_day() const;
     int Get_month() const;
@@ -24,6 +25,7 @@ public:
     void Cancel_flight(Flight);
 
 private:
+    char airCompanyName[100];
     char destination[200];
     struct Date
     {
@@ -43,5 +45,6 @@ private:
 };
 
 #endif //FLIGHT_HPP
+
 
 
