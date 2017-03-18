@@ -12,3 +12,4 @@
 6. **Curly closing bracket** : an empty line right after it
 7. **Tab definition** : 4 spaces
 8. **Class definition** : public class members are declared before the private ones
+9. **Operators** : free space before and right after the operator
