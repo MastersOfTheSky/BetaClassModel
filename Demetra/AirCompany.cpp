@@ -12,7 +12,7 @@ AirCompany::AirCompany()
     activeFlightsOnTheMoment = 0;
 }
 
-AirCompany::AirCompany(_companyName, int _numberOfFlyingMachines, int _activeFlightsOnTheMoment)
+AirCompany::AirCompany(char* _companyName, int _numberOfFlyingMachines, int _activeFlightsOnTheMoment)
 {
     strcpy(companyName, _companyName);
     numberOfFlyingMachines = _numberOfFlyingMachines;
@@ -43,7 +43,7 @@ void AirCompany::Set_active_flights(Flight _other)
         if(name[i] == companyName[i])
             counter ++;
     if(counter == len)
-        activeFlightsOnTheMoment = _other.numberOfFlights;
+        activeFlightsOnTheMoment = _other.Get_number_of_flights();
 }
 
 void AirCompany::Set_number_of_machines(int _newMachines)

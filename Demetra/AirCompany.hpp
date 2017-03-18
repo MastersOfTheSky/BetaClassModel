@@ -1,5 +1,6 @@
 #ifndef AIR_COMPANY_HPP
 #define AIR_COMPANY_HPP
+#include "Flights.hpp"
 
 class AirCompany
 {

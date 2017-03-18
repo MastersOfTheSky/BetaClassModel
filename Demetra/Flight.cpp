@@ -4,7 +4,7 @@
 
 Flight::Flight()
 {
-    strcpy(airCompanyName, "Company name.")
+    strcpy(airCompanyName, "Company name.");
     strcpy(destination, "where you want to go.");
     dater.day = 1;
     dater.month = 1;
@@ -15,7 +15,7 @@ Flight::Flight()
     ticketPrice = 0;
 }
 
-Flight::Flight(char*, _airCompanyName, char* _destination, int _day, int _month, int _year, int _hours,
+Flight::Flight(char* _airCompanyName, char* _destination, int _day, int _month, int _year, int _hours,
                int _mins, int _numberOfFlights, double _newTicketPrice)
 {
     strcpy(airCompanyName, _airCompanyName);
@@ -99,7 +99,7 @@ void Flight::Cancel_this_flight()
     dater.year = 0;
     timer.hours = 0;
     timer.mins = 0;
-    numberOfFlights = _other.numberOfFlights - 1;
+    numberOfFlights -= 1;
     ticketPrice = 0;
 }
 

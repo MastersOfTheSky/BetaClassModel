@@ -14,7 +14,7 @@ public:
     int Get_year() const;
     int Get_hours() const;
     int Get_mins() const;
-    int Get_number_of_identical_flights() const;
+    int Get_number_of_flights() const;
     double Get_ticketPrice() const;
 
     void Set_time(int, int);

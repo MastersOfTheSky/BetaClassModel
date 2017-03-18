@@ -27,6 +27,7 @@ public:
 
 private:
     flyingTypes airplane;
+    char* companyName[100];
     int maxPeopleInThePlane;
     int peopleForFlight;
     char destination[200];
