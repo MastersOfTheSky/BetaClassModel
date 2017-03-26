@@ -1,0 +1,32 @@
+*При стартиране на програмата всичките данни от файловете ще се зареждат в самата програма под формата на различни структури от данни, по конкретно всички полети в момента, и в момента преди затваряне на програмата, всичко ще се презаписва в файловете*
+
+class File
+-----------------
+- Write data(T data, enum dataType, string file)
+- Write data(масив от Т-та, enum dataType, string file)
+- Delete data(T data, enum datatType, string file)
+- T* (масив от всички полети, хора, т.н) GetAllData(enum DataType, string file) //различни типове за различните типове данни
+- Erase data from a file(string file)
+
+class FlightFactory
+-----------------
+- bool Add a flight (AllFlights, FlightToAdd) {Прави проверка дали избрания самолет, екипаж и т.н са вече в полет, дали времето на полета е вече минало и т.н}
+- void Delay a flight (AllFlights, Flight, delayDate)
+- Cancel a flight (AllFlights, Flight)
+- Add a person to a flight (Flight, Person, ticket) {Проверка дали вече има такъв човек}
+- Remove a person from a flight (Flight, Person)
+- Clear flights which have landed (Flights) 
+
+class PersonFactory
+-----------------
+- bool Add person (AllPersons, Person) { проверка дали вече има такъв човек, ако има, добавянето връща false }
+//Различни методи за различните позиции на хората
+- bool Remove person (AllPersons, Person)
+- Forbid person to travel (AllPersons, Person, Datetime period)
+
+class PlaneFactory
+-------------------
+- Add airplane (AllPlanes, Airplane)
+- Remove airplane (AllPlanes, Airplane)
+- Do maintenanceToAllPlanes (AllPlanes)
+- Do maintanceToASpecificPlane (AllPlanes, Airplane)
