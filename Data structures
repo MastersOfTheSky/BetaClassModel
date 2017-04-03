@@ -1,0 +1,6 @@
+Needed data structures:
+
+1. Something similar to a vector, needed functionality: adding an element; removing an element; changing an element;
+    iterating through the elements;
+2. Dictionary: store information <Person, Ticket> for each flight that is saved;
+3. String - easier work with text, concatenating, extending, passing as arguments;
