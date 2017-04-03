@@ -24,7 +24,6 @@ class PersonFactory
 - bool Remove person (AllPersons, Person)
 - Forbid person to travel (AllPersons, Person, Datetime period)
 
-
 class PlaneFactory
 -------------------
 - Add airplane (AllPlanes, Airplane)
