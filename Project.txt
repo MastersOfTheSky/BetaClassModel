@@ -1,28 +1,29 @@
-*При стартиране на програмата всичките данни от файловете ще се зареждат в самата програма под формата на различни структури от данни, по конкретно всички полети в момента, и в момента преди затваряне на програмата, всичко ще се презаписва в файловете*
+*ГЏГ°ГЁ Г±ГІГ Г°ГІГЁГ°Г Г­ГҐ Г­Г  ГЇГ°Г®ГЈГ°Г Г¬Г ГІГ  ГўГ±ГЁГ·ГЄГЁГІГҐ Г¤Г Г­Г­ГЁ Г®ГІ ГґГ Г©Г«Г®ГўГҐГІГҐ Г№ГҐ Г±ГҐ Г§Г Г°ГҐГ¦Г¤Г ГІ Гў Г±Г Г¬Г ГІГ  ГЇГ°Г®ГЈГ°Г Г¬Г  ГЇГ®Г¤ ГґГ®Г°Г¬Г ГІГ  Г­Г  Г°Г Г§Г«ГЁГ·Г­ГЁ Г±ГІГ°ГіГЄГІГіГ°ГЁ Г®ГІ Г¤Г Г­Г­ГЁ, ГЇГ® ГЄГ®Г­ГЄГ°ГҐГІГ­Г® ГўГ±ГЁГ·ГЄГЁ ГЇГ®Г«ГҐГІГЁ Гў Г¬Г®Г¬ГҐГ­ГІГ , ГЁ Гў Г¬Г®Г¬ГҐГ­ГІГ  ГЇГ°ГҐГ¤ГЁ Г§Г ГІГўГ Г°ГїГ­ГҐ Г­Г  ГЇГ°Г®ГЈГ°Г Г¬Г ГІГ , ГўГ±ГЁГ·ГЄГ® Г№ГҐ Г±ГҐ ГЇГ°ГҐГ§Г ГЇГЁГ±ГўГ  Гў ГґГ Г©Г«Г®ГўГҐГІГҐ*
 
 class File
 -----------------
 - Write data(T data, enum dataType, string file)
-- Write data(масив от Т-та, enum dataType, string file)
+- Write data(Г¬Г Г±ГЁГў Г®ГІ Г’-ГІГ , enum dataType, string file)
 - Delete data(T data, enum datatType, string file)
-- T* (масив от всички полети, хора, т.н) GetAllData(enum DataType, string file) //различни типове за различните типове данни
+- T* (Г¬Г Г±ГЁГў Г®ГІ ГўГ±ГЁГ·ГЄГЁ ГЇГ®Г«ГҐГІГЁ, ГµГ®Г°Г , ГІ.Г­) GetAllData(enum DataType, string file) //Г°Г Г§Г«ГЁГ·Г­ГЁ ГІГЁГЇГ®ГўГҐ Г§Г  Г°Г Г§Г«ГЁГ·Г­ГЁГІГҐ ГІГЁГЇГ®ГўГҐ Г¤Г Г­Г­ГЁ
 - Erase data from a file(string file)
 
 class FlightFactory
 -----------------
-- bool Add a flight (AllFlights, FlightToAdd) {Прави проверка дали избрания самолет, екипаж и т.н са вече в полет, дали времето на полета е вече минало и т.н}
+- bool Add a flight (AllFlights, FlightToAdd) {ГЏГ°Г ГўГЁ ГЇГ°Г®ГўГҐГ°ГЄГ  Г¤Г Г«ГЁ ГЁГ§ГЎГ°Г Г­ГЁГї Г±Г Г¬Г®Г«ГҐГІ, ГҐГЄГЁГЇГ Г¦ ГЁ ГІ.Г­ Г±Г  ГўГҐГ·ГҐ Гў ГЇГ®Г«ГҐГІ, Г¤Г Г«ГЁ ГўГ°ГҐГ¬ГҐГІГ® Г­Г  ГЇГ®Г«ГҐГІГ  ГҐ ГўГҐГ·ГҐ Г¬ГЁГ­Г Г«Г® ГЁ ГІ.Г­}
 - void Delay a flight (AllFlights, Flight, delayDate)
 - Cancel a flight (AllFlights, Flight)
-- Add a person to a flight (Flight, Person, ticket) {Проверка дали вече има такъв човек}
+- Add a person to a flight (Flight, Person, ticket) {ГЏГ°Г®ГўГҐГ°ГЄГ  Г¤Г Г«ГЁ ГўГҐГ·ГҐ ГЁГ¬Г  ГІГ ГЄГєГў Г·Г®ГўГҐГЄ}
 - Remove a person from a flight (Flight, Person)
 - Clear flights which have landed (Flights) 
 
 class PersonFactory
 -----------------
-- bool Add person (AllPersons, Person) { проверка дали вече има такъв човек, ако има, добавянето връща false }
-//Различни методи за различните позиции на хората
+- bool Add person (AllPersons, Person) { ГЇГ°Г®ГўГҐГ°ГЄГ  Г¤Г Г«ГЁ ГўГҐГ·ГҐ ГЁГ¬Г  ГІГ ГЄГєГў Г·Г®ГўГҐГЄ, Г ГЄГ® ГЁГ¬Г , Г¤Г®ГЎГ ГўГїГ­ГҐГІГ® ГўГ°ГєГ№Г  false }
+//ГђГ Г§Г«ГЁГ·Г­ГЁ Г¬ГҐГІГ®Г¤ГЁ Г§Г  Г°Г Г§Г«ГЁГ·Г­ГЁГІГҐ ГЇГ®Г§ГЁГ¶ГЁГЁ Г­Г  ГµГ®Г°Г ГІГ 
 - bool Remove person (AllPersons, Person)
 - Forbid person to travel (AllPersons, Person, Datetime period)
+
 
 class PlaneFactory
 -------------------
