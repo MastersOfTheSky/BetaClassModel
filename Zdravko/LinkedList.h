@@ -37,19 +37,19 @@ private:
 
 	void ClearEverything();
 	void CopyFrom(const LinkedList<T> &other);
-	template <typename M>
+	//template <typename M>
 	struct Node
 	{
-		M element;
+		T element;
 		Node* nextNode;
 
-		Node(M _element, Node* _nextNode = nullptr) : element(_element), nextNode(_nextNode)
+		Node(T _element, Node* _nextNode = nullptr) : element(_element), nextNode(_nextNode)
 		{
 		}
 	};
 
-	Node<T>* first;
-	Node<T>* last;
+	Node* first;
+	Node* last;
 	size_t currentLength;
 };
 
@@ -126,7 +126,7 @@ inline void LinkedList<T>::Remove_at_index(size_t ind)
 	}
 
 	size_t currentInd = 0;
-	Node<T>* temp = first;
+	Node* temp = first;
 
 	while (currentInd < ind - 1)
 	{
@@ -135,7 +135,7 @@ inline void LinkedList<T>::Remove_at_index(size_t ind)
 		currentInd++;
 	}
 
-	Node<T> *nodeToDelete = temp->nextNode;
+	Node* nodeToDelete = temp->nextNode;
 	temp->nextNode = nodeToDelete->nextNode;
 
 	delete[] nodeToDelete;
@@ -150,7 +150,7 @@ template<typename T>
 inline const T & LinkedList<T>::Get_at_index(size_t ind) const
 {
 	size_t curr = 0;
-	Node<T>* tmp = first;
+	Node* tmp = first;
 
 	while (curr < ind)
 	{
@@ -179,7 +179,7 @@ inline void LinkedList<T>::Push_at_index(size_t ind, T element)
 		return;
 	}
 
-	Node<T>* tmp = first;
+	Node* tmp = first;
 	size_t currentPos = 0;
 
 	while (currentPos < ind - 1)
@@ -189,7 +189,7 @@ inline void LinkedList<T>::Push_at_index(size_t ind, T element)
 		currentPos++;
 	}
 
-	Node<T>* nodeToAdd = new Node<T>(element, tmp->nextNode);
+	Node* nodeToAdd = new Node<T>(element, tmp->nextNode);
 	tmp->nextNode = nodeToAdd;
 
 	++currentLength;
@@ -198,7 +198,7 @@ inline void LinkedList<T>::Push_at_index(size_t ind, T element)
 template<typename T>
 inline void LinkedList<T>::Push_front(T element)
 {
-	Node<T>* nodeToAdd = new Node<T>(element, first);
+	Node* nodeToAdd = new Node(element, first);
 	first = nodeToAdd;
 
 	if (currentLength == 0)
@@ -220,7 +220,7 @@ inline void LinkedList<T>::Push_back(T element)
 		return;
 	}
 
-	Node<T>* nodeToAdd = new Node<T>(element, nullptr);
+	Node* nodeToAdd = new Node(element, nullptr);
 	last->nextNode = nodeToAdd;
 	last = last->nextNode;
 
@@ -230,7 +230,7 @@ inline void LinkedList<T>::Push_back(T element)
 template<typename T>
 inline void LinkedList<T>::Pop_front()
 {
-	Node<T>* nodeToDel = first;
+	Node* nodeToDel = first;
 	first = first->nextNode;
 
 	delete[] nodeToDel;
@@ -272,7 +272,7 @@ inline void LinkedList<T>::Reverse()
 template<typename T>
 inline void LinkedList<T>::Map(Func<T> function)
 {
-	Node<T>* iterator = first;
+	Node* iterator = first;
 
 	while (iterator != nullptr)
 	{
@@ -284,7 +284,7 @@ inline void LinkedList<T>::Map(Func<T> function)
 template<typename T>
 inline void LinkedList<T>::RemoveAll(T elementToDel)
 {
-	Node<T>* iterator = first;
+	Node* iterator = first;
 	size_t currentInd = 0;
 
 	while (iterator != nullptr)
@@ -314,7 +314,7 @@ inline void LinkedList<T>::ClearEverything()
 template<typename T>
 inline void LinkedList<T>::CopyFrom(const LinkedList<T>& other)
 {
-	Node<T>* currNode = other.first;
+	Node* currNode = other.first;
 	while (currNode != nullptr)
 	{
 		Push_back(currNode->element);
