@@ -4,15 +4,15 @@
 using namespace std;
 
 template<typename T>
-MyStack<T>::MyStack():size(0), top(-1)
-{
-    ptr = new T[size];
-}
+MyStack<T>::MyStack(): size(0), top(-1) {}
 
 template<typename T>
-MyStack<T>::MyStack(int _size): size(_size)
+MyStack<T>::MyStack(int _size): size(_size), top(-1)
 {
-    ptr = new T[size];
+    if(size!=0)
+        ptr = new T[size];
+    else
+        ptr = nullptr;
     top=-1;
 }
 
@@ -100,7 +100,8 @@ T& MyStack<T>::Pop()
 {
     if(!Empty())
     {
-        T element = ptr[top--];
+        T element = ptr[top];
+        top--;
         return element;
     }
 }
@@ -134,7 +135,7 @@ void MyStack<T>::Swap(MyStack<T>& other)
 template<typename T>
 void MyStack<T>::Print()
 {
-    for(int i=top; i<size; i++)
+    for(int i=0; i<=top; i++)
         cout << ptr[i] << " ";
       cout<<endl;
 }
