@@ -38,19 +38,19 @@ public:
 	//Aircraft& operator =(const Aircraft&);
 	//	~Aircraft();
 
-	virtual bool IsFlying() const;
-	virtual long CapacityofFuel() const;
-	virtual long CapacityOfPeople() const;
-	virtual long CapacityofFuelLeft() const;
-	virtual long MaxCapacityOfPeople() const;
-	virtual bool IsInProperCondition() const;
-	virtual string OwnerCompany() const;
+	virtual bool Is_flying() const;
+	virtual long Capacity_of_fuel() const;
+	virtual long Capacity_of_people() const;
+	virtual long Capacity_of_fuel_left() const;
+	virtual long Max_capacity_of_people() const;
+	virtual bool Is_in_proper_condition() const;
+	virtual string Owner_company() const;
 
-	virtual void ChangeCapacityOfPeople(long);
-	virtual void AddNewPeople(long);
-	virtual void ChangeCapacityOfFuel(long);
-	virtual void ChangeFlyingStatus(bool);
-	virtual void ChangeCondition(Condition);
+	virtual void Change_capacity_of_people(long);
+	virtual void Add_new_people(long);
+	virtual void Change_capacity_of_fuel(long);
+	virtual void Change_flying_status(bool);
+	virtual void Change_condition(Condition);
 
 private:
 	bool flying;
@@ -61,7 +61,7 @@ private:
 	Condition condition;
 	string company;
 
-//	void CopyFrom(const Aircraft&);
+//	void Copy_from(const Aircraft&);
 //	void Clear();
 };
 
@@ -74,11 +74,11 @@ public:
 	Helicopter(bool, string, Condition, Purpose);
 	//Helicopter(const Helicopter&);
 
-	string ViewPurpose() const;
-	long CapacityOfPeople() const override;
-	long MaxCapacityOfPeople() const override;
-	void AddNewPeople(long) override;
-	void ChangePurpose(Purpose);
+	string View_purpose() const;
+	long Capacity_of_people() const;
+	long Max_capacity_of_people() const;
+	void Add_new_people(long);
+	void Change_purpose(Purpose);
 
 private:
 	bool flying;
@@ -100,7 +100,7 @@ public:
 	Airplane(bool, string, Condition);
 	//Airplane(const Airplane&);
 
-	virtual long MaxLuggage() const;
+	virtual long Max_luggage() const;
 
 private:
 	long maxLuggage;
@@ -122,11 +122,11 @@ public:
 	AirFreighter(bool, string, Condition);
 //	AirFreighter(const AirFreighter&);
 
-	long MaxLuggage() const override;
-	long CapacityOfLuggage() const;
-	void ChangeLuggage(long, Luggage);
-	bool IsEmpty() const;
-	bool IsFull() const;
+	long Max_luggage() const override;
+	long Capacity_of_luggage() const;
+	void Change_luggage(long, Luggage);
+	bool Is_empty() const;
+	bool Is_full() const;
 
 private:
 	long capacityOfLuggage;
