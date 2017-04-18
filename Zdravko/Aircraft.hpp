@@ -14,6 +14,7 @@ enum Condition
 class Aircraft
 {
 public:
+
 	Aircraft(string, double, double, int, int, Condition);
 	Condition Get_condition();
 	void Set_condition(Condition);
@@ -23,9 +24,10 @@ public:
 	int Get_crew_amount();
 	string Get_owner_company();
 	void Set_owner(string);
-	virtual int MakeAFlight(string destination, double distance);
+	virtual double MakeAFlight(string destination, double distance);
 
 private:
+
 	Condition condition;
 	double maxFlyingDistance;
 	double maxSpeedPerHourInKm;

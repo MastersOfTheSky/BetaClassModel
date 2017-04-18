@@ -48,10 +48,10 @@ void Aircraft::Set_owner(string owner)
 	ownerCompany = owner;
 }
 
-int Aircraft::MakeAFlight(string destination, double distance)
+double Aircraft::MakeAFlight(string destination, double distance)
 {
-	int timeInMinutes;
-	int speed = Get_max_speed() / 2;               //Useless code for now
+	double timeInMinutes;
+	double speed = Get_max_speed() / 2;               //Useless code for now
 	timeInMinutes = (distance / speed) * 60;
 
 	return timeInMinutes;

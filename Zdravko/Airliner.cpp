@@ -19,7 +19,7 @@ void Airliner::ActivateSafeMode()
 	areSafetyBeltsActivated = true;
 }
 
-int Airliner::MakeAFlight(string destination, double distance)
+double Airliner::MakeAFlight(string destination, double distance)
 {
 	if (numberOfSafetyBoats == 0)
 	{
